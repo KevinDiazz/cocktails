@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  font-family: "Major Mono Display", monospace;
+  font-size: 23pt;
+  text-align: center;
+}
+
+.section1 {
+  width: 300px;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 14pt;
+  font-weight: 300;
+  font-family: "EB Garamond", serif;
+  margin-top: 10px;
+  height: 300px;
+  z-index: 3;
+}
+.gridSection2 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(90px, 1fr));
+  grid-template-rows: (1fr, 1fr);
+  width: 400px;
+  height: 400px;
+  grid-gap: 10px;
+  padding: 10px;
+  margin-bottom: 50px;
+}
+.info {
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+  align-items: center;
+  margin-top: -20px;
+  flex-wrap: wrap;
+}
+.coctails {
+  width: 100%;
+  height: 80%;
+  float: left;
+  z-index: 3;
+}
+.imgCoctel1,
+.imgCoctel2,
+.imgCoctel3,
+.imgCoctel4,
+.imgCoctel5,
+.imgCoctel6,
+.imgCoctel7,
+.imgCoctel8 {
+  width: 100%;
+  height: 80%;
+}
+
+.coctel {
+  cursor: pointer;
+  position: relative;
+  margin-top: 50px;
+}
+.coctelName1,
+.coctelName2,
+.coctelName3,
+.coctelName4,
+.coctelName5,
+.coctelName6,
+.coctelName7,
+.coctelName8 {
+  display: none;
+  text-align: center;
+  position: absolute;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 20px;
+  z-index: 4;
+  width: 100%;
+  top: 99%;
+  color: rgb(255, 185, 55);
+}
+.italic {
+  font-style: italic;
+}
+
+.nameCoctail {
+  position: relative;
+  bottom: 10px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 30pt;
+}
+.infoCoctails {
+  position: relative;
+  width: 400px;
+}
+.origen {
+  max-height: 300px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+h4 {
+  margin-top: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(153, 153, 153);
+  height: 2px;
+}
+@media (width<899px) {
+  .nameCoctail {
+    margin-top: 30px;
+  }
+  .gridSection2 {
+    margin-bottom: 150px;
+  }
+}
+
+@media (width<500px) {
+  .infoCoctails {
+    max-width: 300px;
+  }
+  .gridSection2 {
+    grid-template-columns: repeat(2, minmax(90px, 1fr));
+    grid-template-rows: (1fr, 1fr, 1fr, 1fr);
+    margin-bottom: 100px;
+  }
+  .coctel {
+    max-width: 130px;
+  }
+  .section1 {
+    margin-top: 20px;
+  }
+}
